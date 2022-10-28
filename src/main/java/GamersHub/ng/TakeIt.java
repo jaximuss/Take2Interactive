@@ -21,7 +21,8 @@ public class TakeIt {
         DefaultShardManagerBuilder Builder = DefaultShardManagerBuilder.createDefault(token);
         Builder.setStatus(OnlineStatus.ONLINE);
         Builder.setActivity(Activity.playing("deez nutz??"));
-        Builder.addEventListeners();
+        //this one is for the commands
+        Builder.addEventListeners(commandHandler);
         shardManager =  Builder.build();
 
     }
